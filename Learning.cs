@@ -15,8 +15,45 @@ public class Learning : MonoBehaviour
 
     void Start()
     {
-        print("this is from print()");
-
-        Debug.Log("this is from Debug.Log()");
+        StartCoroutine(ExecuteSomething());
     }
+
+
+    // Coroutines
+    IEnumerator ExecuteSomething()
+    {
+        yield return new WaitForSeconds(2f);
+
+        Debug.Log("Something is executed");
+    }
+
+    // // a function that doesn't return a value and doesn't take params
+    // void CalculateTwoNumbers()
+    // {
+    //     float a = 10;
+    //     float b = 12;
+    //     float c = a + b;
+
+    //     Debug.Log("The sum of a and b is: " + c);
+    // }
+
+
+    // // a function that doesn't return a value but takes params
+    // void CalculateTwoNumbers(float a, float b)
+    // {
+    //     Debug.Log("The sum of a and b is: " + (a + b));
+    // }
+
+    // // a function that returns a value but doesn't take params
+    // float ReturnTwoNumbers()
+    // {
+    //     return 20 + 30;
+    // }
+
+
+    // // a function that returns a value and takes params
+    // float ReturnTwoNumbers(float a, float b)
+    // {
+    //     return a + b;
+    // }
 }
