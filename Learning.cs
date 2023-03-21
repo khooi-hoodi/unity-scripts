@@ -15,17 +15,29 @@ public class Learning : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(ExecuteSomething());
+        Player warrior = new Player(1, 2, "Khoi");
+        Player archer = new Player(4, 5, "Duong");
+
+        warrior.Info();
+        archer.Info();
+
+        warrior.Attack();
+
+        warrior.Health = 26;
+
+        warrior.Info();
+        // warrior.SetHealth(20);
+        // Debug.Log(warrior.GetHealth());
     }
 
 
-    // Coroutines
-    IEnumerator ExecuteSomething()
-    {
-        yield return new WaitForSeconds(2f);
+    // // Coroutines
+    // IEnumerator ExecuteSomething()
+    // {
+    //     yield return new WaitForSeconds(2f);
 
-        Debug.Log("Something is executed");
-    }
+    //     Debug.Log("Something is executed");
+    // }
 
     // // a function that doesn't return a value and doesn't take params
     // void CalculateTwoNumbers()
